@@ -1,0 +1,33 @@
+<%- include('header') -%>
+        <h1><%= title %></h1>
+
+        <% for(let item of items) {%>
+            <form method="post">
+                <input type="hidden" name="id" value="<%= item._id %>">
+                <label for="name">name: </label>
+                <input name="name" id="name" value="<%= item.name %>">
+                <br><br>
+                <label for="desc">description: </label>
+                <input name="desc" id="desc" value="<%= item.description %>">
+                <br><br>
+                <label for="categ">category:</label>
+                <select name="categ" id="categ">
+                    <% for(let categ of categs) {%>
+                        <% if(categ.name === item.category.name) {%>
+                            <option selected><%= categ.name %></option>
+                        <% } else {%>
+                            <option><%= categ.name %></option>
+                        <% } %>
+                    <% } %>
+                </select>
+                <br><br>
+                <label for="price">price: </label>
+                <input name="price" id="price" value="<%= item.price %>">
+                <br><br>
+                <label for="num">number: </label>
+                <input name="num" id="num" value="<%= item.number_in_stock %>">
+                <br><br>
+                <button>CONFIRM</button>
+            </form>
+        <% } %>
+<%- include('footer') -%>

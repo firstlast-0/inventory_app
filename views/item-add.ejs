@@ -1,0 +1,28 @@
+<%- include('header') -%>
+
+    <h1><%= title %></h1>
+
+    <form action="/items/add" method="post">
+        <label for="name">name: </label>
+        <input name="name" id="name">
+
+        <label for="desc">description: </label>
+        <input name="desc" id="desc">
+
+        <label for="categ">category:</label>
+        <select name="categ" id="categ">
+            <% for(let categ of categs) {%>
+                <option><%= categ.name %></option>
+            <% } %>
+        </select>
+
+        <label for="price">price: </label>
+        <input name="price" id="price">
+
+        <label for="num">number: </label>
+        <input name="num" id="num">
+        <br><br>
+        <button>ADD</button>
+    </form>
+
+<%- include('footer') -%>

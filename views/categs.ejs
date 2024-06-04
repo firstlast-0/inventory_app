@@ -1,0 +1,13 @@
+<%- include('header') -%>
+
+        <h1><%= title %></h1>
+
+        <% for(let categ of categs) {%>
+            <div>
+                Name: <a href=<%= categ.url %>><%= categ.name %></a><br>
+                Description: <%= categ.description %><br>
+                <a href=<%= categ.url + '/delete'%>><button>DELETE</button></a>
+            </div><br>
+        <% } %>
+
+<%- include('footer') -%>

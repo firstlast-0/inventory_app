@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inventory App</title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <a href="/">ALL ITEMS</a>
+        <a href="/categories">ALL CATEGORIES</a>
+        <a href="/items/add">ADD ITEM</a>
+        <a href="/categories/add">ADD CATEGORY</a>
+        <form action="/" method="POST">
+            FILTER BY CATEGORY <select name="cat">
+                <option></option>
+                <% for(let categ of categs) {%>
+                    <option><%= categ.name %></option>
+                <% } %>
+            </select>
+            <button>GO</button>
+        </form>

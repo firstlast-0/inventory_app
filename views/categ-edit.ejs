@@ -1,0 +1,16 @@
+<%- include('header') -%>
+        <h1><%= title %></h1>
+
+        <% for(let item of items) {%>
+            <form method="post">
+                <input type="hidden" name="id" value=<%= item._id %>>
+                <label for="name">name: </label>
+                <input name="name" id="name" value="<%= item.name %>">
+                <br><br>
+                <label for="desc">description: </label>
+                <input name="desc" id="desc" value="<%= item.description %>">
+                <br><br>
+                <button>CONFIRM</button>
+            </form>
+        <% } %>
+<%- include('footer') -%>

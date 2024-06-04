@@ -1,0 +1,16 @@
+<%- include('header') -%>
+
+    <h1><%= title %></h1>
+
+    <form action="/categories/add" method="post">
+        <label for="name">name: </label>
+        <input name="name" id="name">
+
+        <label for="desc">description: </label>
+        <input name="desc" id="desc">
+
+        <br><br>
+        <button>ADD</button>
+    </form>
+
+<%- include('footer') -%>

@@ -1,0 +1,14 @@
+<%- include('header') -%>
+        <h1><%= title %></h1>
+
+        <% for(let item of items) {%>
+            <div>
+                Description: <%= item.description %><br>
+                Category: <%= item.category.name %><br>
+                Price: <%= item.price %><br>
+                # in stock: <%= item.number_in_stock %><br>
+                <a href=<%= item.url + '/edit'%>><button>EDIT</button></a>
+                <a href=<%= item.url + '/delete'%>><button>DELETE</button></a>
+            </div><br>
+        <% } %>
+<%- include('footer') -%>
